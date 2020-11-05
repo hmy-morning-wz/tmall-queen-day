@@ -1,0 +1,146 @@
+@fw: 750/100;
+.content {
+  color: #222;
+}
+
+.hide{
+  display: none;
+}
+
+.outermostLayer {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+.secondLayer {
+  min-height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  position: relative;
+  background-color: #FF6F77;
+  background: url('https://images.allcitygo.com/20200108153900948bWeO3C.jpg?x-oss-process=image/format,webp') no-repeat;
+  background-size: contain;
+}
+.paddingDiv {
+  padding-top: 755vw/@fw;
+}
+
+.ruless {
+  position: absolute;
+  top: 170vw/@fw;
+  right: 0;
+  width:172vw/@fw;
+  height:64vw/@fw;
+  background:linear-gradient(147deg,rgba(255,81,103,1) 0%,rgba(254,81,169,1) 100%);
+  box-shadow:0 6vw/@fw 12vw/@fw 0 rgba(37,176,220,0.58);
+  border-radius:100vw/@fw 0 0 100vw/@fw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:26vw/@fw;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:37vw/@fw;
+}
+
+.goBackTop {
+	width: 104vw/@fw;
+	height: 104vw/@fw;
+	position: fixed;
+	right: 24vw/@fw;
+  bottom: 95vw/@fw;
+  z-index: 101;
+	img {
+		display: block;
+		width: 104vw/@fw;
+		height: 104vw/@fw;
+	}
+}
+// 樱花季入口
+.sakura {
+  width: 126vw/@fw;
+	height: 126vw/@fw;
+	position: fixed;
+	right: 12vw/@fw;
+  top: 720vw/@fw;
+  background: url('https://images.allcitygo.com/20200214132516711rNuLOC.png') no-repeat;
+  background-size: 100% 100%;
+  z-index: 101;
+}
+.kvBanner {
+  width:750vw/@fw;
+  height:422vw/@fw;
+  margin-bottom: 40vw/@fw;
+  position: relative;
+  .entranceBanner {
+    position: absolute;
+    width:160vw/@fw;
+    height:44vw/@fw;
+    bottom: 56vw/@fw;
+    left: 24vw/@fw;
+  }
+}
+// 弹幕
+.barrageAd {
+  position: absolute;
+  top: 726vw/@fw;
+  height: 38vw/@fw !important;
+  width: 100%;
+  z-index: 100;
+  font-size:20vw/@fw;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(255,248,241,1);
+  line-height:28vw/@fw;
+  overflow: hidden;
+  .barrageSwiper {
+    width: fit-content;
+    // height: 36vw/@fw;
+    display: flex;
+    white-space:nowrap;
+    visibility: hidden;
+  }
+  .barrageTxt {
+    flex: 1;
+    height:36vw/@fw;
+    padding: 0 16vw/@fw;
+    display: flex;
+    align-items: center;
+    background:rgba(0,0,0,0.3);
+    border-radius:18vw/@fw;
+    margin-left: 30vw/@fw;
+    text-align: center;
+    line-height:28vw/@fw;
+    // border:1vw/@fw solid rgba(255,255,255,1);
+    box-shadow: inset 0 0 2vw/@fw 0 rgba(255,255,255,1);
+  }
+}
+
+/* 弹幕效果 */
+@keyframes smoothMoving {
+  from {
+    visibility: visible;
+    transform: translateX(750vw/@fw);
+  }
+  to {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+.smoothMoving {
+  animation: smoothMoving 120s linear;
+}
+
+.am-toast {
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  width: 100%;
+  margin-top: -60px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: sans-serif
+}

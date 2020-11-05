@@ -1,0 +1,426 @@
+{
+  "type": "object",
+  "title": "组件配置",
+  "properties": {
+    "config": {
+      "type": "object",
+      "title": "组件配置",
+      "properties": {
+        "debug": {
+          "type": "string",
+          "title": "测试模式",
+          "enum": [
+            "ON",
+            "OFF"
+          ]
+        },
+        "backClass": {
+          "type": "array",
+          "title": "福袋列表",
+          "items": {
+            "type": "object",
+            "title": "福袋",
+            "properties": {
+              "id": {
+                "type": "string",
+                "title": "福袋Id"
+              },
+              "name": {
+                "type": "string",
+                "title": "商家名称"
+              },
+              "sellerId": {
+                "type": "string",
+                "title": "商家sellerId"
+              },           
+              "couponPrize": {
+                "type": "string",
+                "title": "奖励文案"
+              },
+              "icon_img": {
+                "type": "string",
+                "title": "商家ICON",
+                "x-format": "@image('80x80')"
+               },             
+              "image": {
+                "type": "string",
+                "title": "结果页面商家广告图片",
+                "x-format": "@image('616x128')"
+              },
+              "bgImage": {
+                "type": "string",
+                "title": "入会关注页面背景图片",
+                "x-format": "@image()"
+              },
+              "followImage": {
+                "type": "string",
+                "title": "关注页面宣传图片",
+                "x-format": "@image('702x756')"
+              },
+              "bannnerUrl": {
+                "type": "string",
+                "title": "结果页面商家广告跳转地址"
+              },
+              "shopUrl": {
+                "type": "string",
+                "title": "结果页面商家到店地址"
+               },          
+              "notice": {
+                "type": "string",
+                "title": "获得奖励条件(入会、关注)"
+              },
+              "draw1Id": {
+                "type": "string",
+                "title": "任务1抽奖id"
+              },
+              "task1Type": {
+                "type": "string",
+                "title": "任务1类型",
+                "enum": [
+                  "member",
+                  "follow",
+                  "goshop",
+                  "none"
+                ]
+              },
+              "task1Url": {
+                "type": "string",
+                "title": "任务1URL"
+              },
+              "draw2Id": {
+                "type": "string",
+                "title": "任务2抽奖id"
+              },
+              "task2Type": {
+                "type": "string",
+                "title": "任务2类型",
+                "enum": [
+                  "member",
+                  "follow",
+                  "goshop",
+                  "none"
+                ]
+              },
+              "task2Url": {
+                "type": "string",
+                "title": "任务2URL"
+              }
+            }
+          }
+        },
+        "brandList": {
+          "type": "array",
+          "title": "品牌列表",
+          "items": {
+            "type": "object",
+            "title": "品牌",
+            "properties": {
+              "icon_img": {
+                "type": "string",
+                "title": "品牌ICON",
+                "x-format": "@image('235x210')"
+              },
+              "brandLink": {
+                "type": "string",
+                "title": "品牌URL"
+              },
+              "link_type": {
+                "title": "跳转链接类型",
+                "type": "string",
+                "enum": [
+                  "DEFAULT",
+                  "ALLCITYGO1",
+                  "ALLCITYGO2",
+                  "ALLCITYGO3",
+                  "detail.tmall",
+                  "TAOBAO",
+                  "ALIPAY"
+                ]
+              },
+              "brandName": {
+                "type": "string",
+                "title": "品牌名称"
+              },
+              "sellerId": {
+                "type": "string",
+                "title": "商家sellerId"
+              }
+            }
+          }
+        },
+        "mustBuyList": {
+          "type": "array",
+          "title": "必买清单列表",
+          "items": {
+            "type": "object",
+            "title": "商品",
+            "properties": {
+              "image": {
+                "type": "string",
+                "title": "图片",
+                "x-format": "@image('226x226')"
+              },
+              "salePrice": {
+                "type": "string",
+                "title": "销售价格"
+               },
+              "link": {
+                "type": "string",
+                "title": "跳转地址"
+                },
+                "link_type": {
+                  "title": "跳转链接类型",
+                  "type": "string",
+                  "enum": [
+                    "DEFAULT",
+                    "ALLCITYGO1",
+                    "ALLCITYGO2",
+                    "ALLCITYGO3",
+                    "detail.tmall",
+                    "TAOBAO",
+                    "ALIPAY"
+                  ]
+                },
+              "originPrice": {
+                "type": "string",
+                "title": "原价"
+                },
+              "goodsName": {
+                "type": "string",
+                "title": "商品名称"
+               },
+               "sellerId": {
+                "type": "string",
+                "title": "商家sellerId"
+              }
+            }
+          }
+        },
+        "brandGoodsList": {
+          "type": "array",
+          "title": "商品列表",
+          "items": {
+            "type": "object",
+            "title": "商品",
+            "properties": {
+              "brandName": {
+                "type": "string",
+                "title": "品牌"
+              },
+              "goodsName": {
+                "type": "string",
+                "title": "商品名称"
+               },
+              "adTxt": {
+                "type": "string",
+                "title": "营销词"
+              },
+              "goodsLink": {
+                "type": "string",
+                "title": "商品链接"
+               },
+               "link_type": {
+                "title": "跳转链接类型",
+                "type": "string",
+                "enum": [
+                  "DEFAULT",
+                  "ALLCITYGO1",
+                  "ALLCITYGO2",
+                  "ALLCITYGO3",
+                  "detail.tmall",
+                  "TAOBAO",
+                  "ALIPAY"
+                ]
+              },
+              "icon_img": {
+                "type": "string",
+                "title": "图片",
+                "x-format": "@image('112x112')"
+              },
+              "sellerId": {
+                "type": "string",
+                "title": "商家sellerId"
+              }
+            }
+          }
+        },
+        "flashSaleList": {
+          "type": "array",
+          "title": "抢购列表",
+          "items": {
+            "type": "object",
+            "title": "商品",
+            "properties": {
+              "icon_img": {
+                "type": "string",
+                "title": "商品图片",
+                "x-format": "@image('144x144')"
+              },
+              "startTime": {
+                "type": "string",
+                "title": "开始时间",
+                "format ":  "date-time"
+              },
+              "endTime": {
+                "type": "string",
+                "title": "结束时间",
+                "format ": "date-time"
+              },
+              "goodsName": {
+                "type": "string",
+                "title": "商品名称"
+              },
+              "adTxt": {
+                "type": "string",
+                "title": "营销词"
+              },
+              "price": {
+                "type": "string",
+                "title": "价格"
+              },
+              "goodsLink": {
+                "type": "string",
+                "title": "商品链接"
+              },
+              "link_type": {
+                "title": "跳转链接类型",
+                "type": "string",
+                "enum": [
+                  "DEFAULT",
+                  "ALLCITYGO1",
+                  "ALLCITYGO2",
+                  "ALLCITYGO3",
+                  "detail.tmall",
+                  "TAOBAO",
+                  "ALIPAY"
+                ]
+              },
+              "sellerId": {
+                "type": "string",
+                "title": "商家sellerId"
+              }
+            }
+          }
+        },
+        "bgColor": {
+          "type": "string",
+          "title": "背景颜色"
+        },
+        "footMarker": {
+          "type": "string",
+          "title": "页面底部文案"
+        },
+        "draw_result": {
+          "type": "object",
+          "title": "抽奖结果弹框配置",
+          "properties": {
+            "image": {
+              "type": "string",
+              "title": "弹框背景",
+              "x-format": "@image('750x296')"
+            },
+            "kefu": {
+              "type": "string",
+              "title": "客服信息"
+            },
+            "buttonText1": {
+              "type": "string",
+              "title": "按钮进店逛逛文案"
+            },
+            "buttonText2": {
+              "type": "string",
+              "title": "按钮更多福袋文案"
+            }
+          }
+        },
+        "my_draw": {
+          "type": "object",
+          "title": "中奖记录",
+          "properties": {
+            "link": {
+              "type": "string",
+              "title": "中奖记录跳转链接"
+            },
+            "link_type": {
+              "title": "中奖记录跳转链接类型",
+              "type": "string",
+              "enum": [
+                "DEFAULT",
+                "ALLCITYGO1",
+                "ALLCITYGO2",
+                "ALLCITYGO3",
+                "detail.tmall",
+                "TAOBAO",
+                "ALIPAY"
+              ]
+            }
+          }
+        },
+        "areaName1": {
+          "type": "string",
+          "title": "区域1名称"
+        },
+        "areaName2": {
+          "type": "string",
+          "title": "区域2名称"
+        },
+        "areaName3": {
+          "type": "string",
+          "title": "区域3名称"
+        },
+        "showBag": {
+          "type": "boolean",
+          "title": "福袋列表开关"
+        },
+        "showArea1": {
+          "type": "boolean",
+          "title": "区域1开关"
+        },
+        "showArea2": {
+          "type": "boolean",
+          "title": "区域2开关"
+        },
+        "showArea3": {
+          "type": "boolean",
+          "title": "区域3开关"
+        },
+        "ruleText": {
+          "type": "string",
+          "title": "规则文案"
+        },
+        "ruleUrl": {
+          "type": "string",
+          "title": "会员规则URL"
+        },        
+        "privacyUrl": {
+          "type": "string",
+          "title": "用户隐私协议URL"
+        },
+        "sakura": {
+          "type": "object",
+          "title": "樱花季入口",
+          "properties": {
+            "link": {
+              "type": "string",
+              "title": "樱花浮层跳转链接"
+            },
+            "link_type": {
+              "title": "樱花浮层跳转链接类型",
+              "type": "string",
+              "enum": [
+                "DEFAULT",
+                "ALLCITYGO1",
+                "ALLCITYGO2",
+                "ALLCITYGO3",
+                "detail.tmall",
+                "TAOBAO",
+                "ALIPAY"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

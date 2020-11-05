@@ -1,0 +1,96 @@
+@fw: 750/100;
+
+.popup-rule-show {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1001;
+  }
+  .popup-rule-hide {
+	display: none;
+  }
+  .popup-rule-mask,
+  .popup-rule-document {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+  }
+  .popup-rule-mask {
+	background-color: rgba(0, 0, 0, 0.75);
+  }
+  .popup-rule-document {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .popup-rule {
+   /* background-color: #fff;*/
+	border-radius: 20vw/@fw;
+	width:542vw/@fw;
+	background: white;
+	position: relative;
+  }
+  .popup-rule .title {
+	margin-top: 34vw/@fw;
+	text-align: center;
+	width:100%;
+	height:48vw/@fw;
+	font-size:32vw/@fw;
+	font-family:PingFangSC-Medium,PingFang SC;
+	font-weight:500;
+	color:rgba(66,82,110,1);
+	line-height:48vw/@fw;
+  }
+  
+  .popup-rule .centent-body {
+	margin-top: 20vw/@fw;
+	overflow: hidden;
+	margin-left:64vw/@fw; 
+	width:414vw/@fw;
+	min-height: 520vw/@fw;
+	max-height: 520vw/@fw;
+	padding: 0 0px;
+	text-align: left;
+	font-size:24vw/@fw;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(122,134,154,1);
+	line-height:40vw/@fw;
+	margin-bottom: 20vw/@fw;
+  }
+  .popup-rule .centent-body .box {
+	height: 520vw/@fw;
+	width: 100%;
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow: hidden;
+	overflow-y: auto;
+	white-space: pre-line;
+  font-size:24vw/@fw;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(122,134,154,1);
+  line-height:40vw/@fw;
+  }
+  
+  
+  .popup-rule-close {
+	position: absolute;
+	display: block;
+	left: 50%;
+	transform : translate(-50%,0);
+	bottom: -50px;
+	height: 48px;
+	width: 48px;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAANlBMVEVMaXGIiIiJiYmJiYn///+IiIiIiIiRkZGJiYmJiYmIiIiZmZmIiIiIiIiLi4uJiYmIiIiIiIif033nAAAAEXRSTlMA3vWjAZv1FdRBcAq0vhZmK7msGmgAAABnSURBVHhe7dEpFoAwEATRTliysIS5/2VReS16xiEp+2XhuQqC2nngshp4262j1Omq2wq6q3Rf6arionRVdaq4qjpVneo71fOUqerJbAkVLRv/eBcW/nEvfPD3/4szPHhXGzj6VPWBF66vCbNK4YfYAAAAAElFTkSuQmCC") center no-repeat;
+	background-size: 16px 16px;
+  }
+  
+  .popup-rule-white {
+	background: url("https://gw.alipayobjects.com/zos/rmsportal/fdmdsySxNBrpcVBVGEUM.png") center no-repeat;;
+	background-size: 16px 16px;
+  }
